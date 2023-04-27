@@ -1,4 +1,2 @@
-node_modules
-
-# Ignore only the lib folder at the top of the root
-/lib
+/node_modules
+/dist

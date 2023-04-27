@@ -1,14 +1,20 @@
 {
 	"compilerOptions": {
-		"target": "ESNext",
-		"module": "ESNext",
-		"lib": ["ESNext", "DOM"],
-		"declaration": true,
-		"outDir": "./lib",
-		"strict": true,
 		"forceConsistentCasingInFileNames": true,
-		"esModuleInterop": true
+		"allowSyntheticDefaultImports": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"noUnusedLocals": true,
+		"noImplicitAny": true,
+		"declarationDir": "dist/types",
+		"declaration": true,
+		"target": "esnext",
+		"module": "esnext",
+		"strict": true
 	},
-	"include": ["src"],
-	"exclude": ["node_modules", "**/__tests__/*"]
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "**/__tests__/*", "dist"]
 }
