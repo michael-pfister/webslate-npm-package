@@ -7,7 +7,7 @@ on:
     branches: ['main']
 
 jobs:
-  build:
+  Test-NPM-Package:
     runs-on: ubuntu-latest
 
     strategy:
