@@ -1,6 +1,6 @@
 {
 	"name": "webslate",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "WebSlate is an easy to install npm package that uses AI to automatically translate your website to multiple languages. It detects the user's preferred language and displays the content accordingly.",
 	"main": "dist/index.cjs.js",
 	"module": "dist/index.esm.js",
