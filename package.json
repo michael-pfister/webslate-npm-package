@@ -9,6 +9,7 @@
 	"scripts": {
 		"lint": "tslint -p tsconfig.json",
 		"format": "prettier --write .",
+		"check-format": "prettier --check .",
 		"test": "jest --config jest.config.ts",
 		"build:types": "tsc --emitDeclarationOnly",
 		"build:js": "rollup -c --bundleConfigAsCjs",
