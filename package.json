@@ -8,8 +8,8 @@
 	"types": "dist/index.d.ts",
 	"scripts": {
 		"watch": "rollup -c --watch --bundleConfigAsCjs",
-		"start": "browser-sync start --server --watch --no-notify",
-		"dev": "npm-run-all --parallel watch start",
+		"start": "browser-sync start --server --no-notify",
+		"dev": "npm-run-all --parallel watch \"start -- --watch\"",
 		"lint": "eslint .",
 		"format": "prettier --write .",
 		"check-format": "prettier --check .",

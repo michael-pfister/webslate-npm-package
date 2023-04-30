@@ -19,7 +19,7 @@ jobs:
           node-version: '18.x'
 
       - name: Install Dependencies ⚗️
-        run: npm install
+        run: npm ci
 
       - name: Check Code Formatting 📑
         run: npm run check-format
