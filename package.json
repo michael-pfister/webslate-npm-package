@@ -13,7 +13,7 @@
 		"lint": "eslint .",
 		"format": "prettier --write .",
 		"check-format": "prettier --check .",
-		"test": "jest --config jest.config.ts",
+		"test": "playwright test",
 		"build:types": "tsc --emitDeclarationOnly",
 		"build:js": "rollup -c --bundleConfigAsCjs",
 		"build": "npm run build:types && npm run build:js",
