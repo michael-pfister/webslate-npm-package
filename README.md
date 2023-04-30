@@ -9,15 +9,18 @@ npm install
 npx playwright install
 
 ```
+
 > <b>NOTE</b> Make sure you have Node and NPM installed on your machine
 
 #### Serve with hot reload
+
 ```bash
 npm run dev
 
 ```
 
 ## Before you commit
+
 ```bash
 npm run format
 npm run lint
