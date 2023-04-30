@@ -17,7 +17,7 @@ npx playwright install
 npm run dev
 ```
 
-## Before you commit
+#### Check your code locally
 
 ```bash
 npm run format
