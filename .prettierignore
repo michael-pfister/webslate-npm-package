@@ -4,3 +4,5 @@
 /playwright-report/
 /playwright/.cache/
 /tests-examples
+/index_files
+/index.html
