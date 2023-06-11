@@ -36,4 +36,4 @@ elements.each((_, element) => {
 	$(element).replaceWith(clone);
 });
 
-console.log(charCount);
+console.log(charCount); // .
