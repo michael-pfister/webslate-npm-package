@@ -4,5 +4,11 @@ module.exports = {
 	parser: '@typescript-eslint/parser',
 	plugins: ['@typescript-eslint'],
 	root: true,
-	ignorePatterns: ['node_modules', 'dist', 'tests-examples', 'index_files', 'index.html'],
+	ignorePatterns: [
+		'node_modules',
+		'dist',
+		'tests-examples',
+		'index_files',
+		'index.html',
+	],
 };
