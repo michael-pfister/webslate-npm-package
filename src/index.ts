@@ -5,7 +5,7 @@ import $ from 'jquery';
  * @returns {JQuery<HTMLElement>} A list of elements that have text inside of them
  */
 function extractElementsToTranslate() {
-	const elements = $('body *:visible').filter((_, element) => {
+const elements = $('body *:visible').filter((_, element) => {
 		const clone = $(element).clone();
 		clone.children().remove();
 		return clone.text().trim().length > 0;
@@ -36,4 +36,4 @@ elements.each((_, element) => {
 	$(element).replaceWith(clone);
 });
 
-console.log(charCount); // .
+console.log(charCount);
