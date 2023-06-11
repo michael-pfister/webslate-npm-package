@@ -10,6 +10,11 @@ jobs:
   Audit-Code:
     runs-on: ubuntu-latest
 
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+
     steps:
       - uses: actions/checkout@v3
 
@@ -21,8 +26,12 @@ jobs:
       - name: Install Dependencies ⚗️
         run: npm ci
 
-      - name: Check Code Formatting 📑
-        run: npm run check-format
+      - name: Run Prettier 📝 # Directly running the formatter currently makes more sense than checking for formatting errors since it saves a lot of work.
+        run: npm run format
+
+      - uses: stefanzweifel/git-auto-commit-action@v4 # Does not commit if there are no changes.
+        with:
+          commit_message: '📝 Format Code'
 
       - name: Run TypeScript Linter 🪄
         run: npm run lint
