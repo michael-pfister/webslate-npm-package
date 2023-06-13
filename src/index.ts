@@ -25,7 +25,7 @@ elements.each((_, element) => {
 	clone.children().remove();
 
 	// overwrite text in clone
-	// clone.text('Ass');
+	clone.text('Ass');
 
 	charCount += clone.text().length;
 
