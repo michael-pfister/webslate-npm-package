@@ -1,6 +1,7 @@
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
+import json from '@rollup/plugin-json';
 import pkg from './package.json';
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
@@ -20,6 +21,9 @@ export default {
 
 		// Allow bundling cjs modules. Rollup doesn't understand cjs
 		commonjs(),
+
+		// Allow json resolution
+		json(),
 
 		// Compile TypeScript/JavaScript files
 		babel({

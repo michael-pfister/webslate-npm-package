@@ -1,19 +1,20 @@
-import $ from 'jquery';
+/* import $ from 'jquery'; */
+import axios from 'axios';
 
 /**
  * Extracts all the elements visible in the body of the page that have text directly in them
  * @returns {JQuery<HTMLElement>} A list of elements that have text inside of them
  */
-function extractElementsToTranslate() {
+/* function extractElementsToTranslate() {
 	const elements = $('body *:visible').filter((_, element) => {
 		const clone = $(element).clone();
 		clone.children().remove();
 		return clone.text().trim().length > 0;
 	});
 	return elements;
-}
+} */
 
-const elements = extractElementsToTranslate();
+/* const elements = extractElementsToTranslate();
 
 let charCount = 0;
 
@@ -37,3 +38,6 @@ elements.each((_, element) => {
 });
 
 console.log(charCount);
+ */
+
+axios.get('https://rickandmortyapi.com/api').then((res) => console.log(res));
