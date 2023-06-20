@@ -16,14 +16,14 @@ export default {
 	external: [],
 
 	plugins: [
+		// Allow json resolution
+		json(),
+
 		// Allows node_modules resolution
-		resolve({ extensions }),
+		resolve({ extensions, jsnext: true, preferBuiltins: true, browser: true }),
 
 		// Allow bundling cjs modules. Rollup doesn't understand cjs
 		commonjs(),
-
-		// Allow json resolution
-		json(),
 
 		// Compile TypeScript/JavaScript files
 		babel({
