@@ -1,5 +1,8 @@
 import $ from 'jquery';
 import axios from 'axios';
+import anime from 'animejs';
+
+
 
 /**
  * Extracts all the elements visible in the body of the page that have text directly in them
@@ -59,6 +62,14 @@ async function translateElements(elements: JQuery<HTMLElement>) {
 
 						// replace original element with clone
 						$(element).replaceWith(clone);
+
+						// animate element
+						/* anime({
+							targets: clone[0],
+							scale: [0, 1],
+							duration: 1000,
+							easing: 'easeInOutQuad',
+						}); */
 					}
 				});
 		})
@@ -104,7 +115,13 @@ function init() {
 	translateElements(elements).then(() => {
 		// listen for changes in the DOM
 		listenForDOMChanges();
-	});
+
+		anime({
+			targets: '[data-translated]',
+			scale: [0, 1],
+			delay: anime.stagger(100),
+		});
+	});	
 }
 
 // initialize when page is loaded
