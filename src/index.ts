@@ -2,8 +2,6 @@ import $ from 'jquery';
 import axios from 'axios';
 import anime from 'animejs';
 
-
-
 /**
  * Extracts all the elements visible in the body of the page that have text directly in them
  * @param {boolean} ignoreTranslatedElements (optional) Whether or not to ignore elements that have already been translated
@@ -121,7 +119,7 @@ function init() {
 			scale: [0, 1],
 			delay: anime.stagger(100),
 		});
-	});	
+	});
 }
 
 // initialize when page is loaded
